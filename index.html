@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Calculator</title>
+        <style>
+        	div{
+        	backgroundcolor: "green";
+            }
+         #c1, #c2, #c3, #c4, #c5, #c6{
+         	fontsize: 30px;
+           }
+        </style>
+        <script>
+        	let counter1 = 0;
+            let counter2 = 0;
+            let counter3 = 0;
+            let counter4 = 0;
+            let counter5 = 0;
+            let counter6 = 0;
+        	document.addEventListener("DOMContentLoaded", function () {
+        	document.querySelector('#f').addEventListener('click', b);
+            document.querySelector('#c').addEventListener('click', m);
+            document.querySelector('#h').addEventListener('click', hello);
+        });      
+          function b(){
+          	
+           if(document.querySelector('h1').style.display == "none"){
+           	document.querySelector('h1').style.display = "block"
+               document.querySelector('h1').style.color = "green"
+            } else {
+               document.querySelector('h1').style.display = "none"
+            }       
+          }
+          
+          function m(){
+              counter++;
+              document.querySelector('h1').innerHTML = counter;  
+              document.querySelector('h1').style.fontSize = "x-large"; 
+              if(counter % 20 == 0){
+              	alert("Seriously");
+          }
+          }
+          function hello(){
+          setInterval(function(){ 
+          	
+            if(counter1 >= 10 || counter2 >= 10){
+            	counter1 = 0;
+                
+             document.querySelector('#c1').innerHTML = counter1;
+             document.querySelector('#c2').innerHTML = counter2;
+             }else{	
+              document.querySelector('#c1').innerHTML = counter1;
+              document.querySelector('#c2').innerHTML = counter2;
+              }
+              counter1++;
+              if(counter1 == 0 || counter1 >= 10 ){
+              counter2++;
+              }
+              if(counter2 == 6){
+              	counter2 = 0;
+                  
+            }
+            
+          
+            
+            
+            
+             if(counter3 >= 10 || counter4 >= 10){
+            	counter3 = 0;
+                
+             document.querySelector('#c3').innerHTML = counter3;
+             document.querySelector('#c4').innerHTML = counter4;
+             }else{	
+              document.querySelector('#c3').innerHTML = counter3;
+              document.querySelector('#c4').innerHTML = counter4;
+              }
+                if(counter2 == 5 && counter1 == 9){
+                	
+            	    counter3++;
+             
+              if(counter3 == 0 || counter3 >= 10 ){
+              counter4++;
+              }
+              if(counter4 == 6){
+              	counter4 = 0;
+            }
+            }
+            
+            
+            
+            
+              if(counter5 >= 10 || counter6 >= 10){
+            	counter5 = 0;
+                
+             document.querySelector('#c5').innerHTML = counter5;
+             document.querySelector('#c6').innerHTML = counter6;
+             }else{	
+              document.querySelector('#c5').innerHTML = counter5;
+              document.querySelector('#c6').innerHTML = counter6;
+              }
+                if(counter4 == 5 && counter3 == 9){
+                	
+            	    counter5++;
+             
+              if(counter5 == 0 || counter5 >= 10 ){
+              counter6++;
+              }
+              if(counter6 == 6){
+              	counter6 = 0;
+            }
+            }
+            
+            
+            
+       
+             
+              }, 1000);
+              
+         }
+        </script>    
+	</head>
+	<body>
+		<div id="time"><span id="c6">0</span><span id="c5">0</span><span>:</span><span id="c4">0</span><span id="c3">0</span><span>:</span><span id="c2">0</span><span id="c1">0</span></div>
+		<button id="f">click</button>
+		<button id="c">count</button>
+		<button id="h">Start</button>
+	</body>
+</html>
