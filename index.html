@@ -18,29 +18,11 @@
             let counter5 = 0;
             let counter6 = 0;
         	document.addEventListener("DOMContentLoaded", function () {
-        	document.querySelector('#f').addEventListener('click', b);
-            document.querySelector('#c').addEventListener('click', m);
-            document.querySelector('#h').addEventListener('click', hello);
+        	
+            document.querySelector('#h').addEventListener('click', clock);
         });      
-          function b(){
-          	
-           if(document.querySelector('h1').style.display == "none"){
-           	document.querySelector('h1').style.display = "block"
-               document.querySelector('h1').style.color = "green"
-            } else {
-               document.querySelector('h1').style.display = "none"
-            }       
-          }
           
-          function m(){
-              counter++;
-              document.querySelector('h1').innerHTML = counter;  
-              document.querySelector('h1').style.fontSize = "x-large"; 
-              if(counter % 20 == 0){
-              	alert("Seriously");
-          }
-          }
-          function hello(){
+          function clock(){
           setInterval(function(){ 
           	
             if(counter1 >= 10 || counter2 >= 10){
